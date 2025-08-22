@@ -45,7 +45,7 @@ source .venv/bin/activate
 python3 main.py
 ```
 ## 2. CLI usage
-[Screen](https://github.com/0xScraper/octra-info-util/blob/main/interface.png)
+![Screen](https://github.com/0xScraper/octra-info-util/blob/main/interface.png)
 ### Menu items (from top to bottom):
 1. Paste octra wallet address and press ENTER for getting wallet information, such as Non-encrypted balance and amount of txns (nonce).
 2. Type 'fau' (without quotation marks) and press ENTER for getting [official faucet](https://faucet.octra.network/) balance.
