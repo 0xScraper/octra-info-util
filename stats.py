@@ -22,11 +22,11 @@ def status(url: str, *, flag: bool) -> None:
         soup: BeautifulSoup = BeautifulSoup(content, 'lxml')
         try:
             mono = soup.find_all('div', class_='mono')
-            param1 = mono[0]
+            param0, param1 = mono[3], mono[0]
             if flag:
                 param2, param3 = mono[1], mono[2]
                 data: list[tuple[str]] = [
-                    ('WALLET', param1.text),
+                    (param0.text.upper(), param1.text),
                     ('BALANCE', param2.text),
                     ('NONCE', param3.text),
                 ]
