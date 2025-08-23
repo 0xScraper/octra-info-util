@@ -1,6 +1,5 @@
 # ruff: noqa: I001
 import os
-from pprint import pprint
 
 import requests
 from bs4 import BeautifulSoup
@@ -23,7 +22,6 @@ def status(url: str, *, flag: bool) -> None:
         soup: BeautifulSoup = BeautifulSoup(content, 'lxml')
         try:
             mono = soup.find_all('div', class_='mono')
-            # param0, param1 = mono[3], mono[0]
             param0 = mono[0]
             if flag:
                 param1, param2, param3 = mono[1], mono[2], mono[3]
